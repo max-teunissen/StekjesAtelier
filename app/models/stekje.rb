@@ -1,0 +1,2 @@
+class Stekje < ApplicationRecord
+end

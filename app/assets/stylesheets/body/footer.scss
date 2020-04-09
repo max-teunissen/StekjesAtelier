@@ -1,0 +1,34 @@
+.align_elements {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.icon_middle {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon_middle:hover {
+    text-decoration: none;
+}
+
+.footer_color {
+    background-color: #A36C42;
+    width: 100%;
+    position: relative;
+}
+
+.footer_icon_color {
+    color: white;
+}
+
+.footer_icon_color:hover {
+    color: white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
