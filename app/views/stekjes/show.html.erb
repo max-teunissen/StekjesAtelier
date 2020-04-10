@@ -1,0 +1,12 @@
+<div class="container">
+  <h2><%= @stekje.name %></h2>
+  <p><%= @stekje.category %></p>
+  <p><%= @stekje.price %></p>
+  <p>
+    <%= image_tag(@stekje.file) %>
+  </p>
+  <%= button_to 'Remove Stekje', stekje_path(@stekje), method: 'delete', confirm: 'Are you sure?',
+      class:'btn btn-danger' %>
+  <br>
+  <%= link_to 'Terug', home_path, class:'btn btn-warning ' %>
+</div>

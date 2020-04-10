@@ -1,0 +1,21 @@
+.card-images-index {
+    width: 288px;
+    height: 288px;
+    display: inline-block;
+}
+
+.index-display {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-height {
+  height: 442px;
+  width: 18rem;
+  border: solid;
+  border-width: 3px;
+}
+
+.h1-css-index {
+  color: red;
+}
