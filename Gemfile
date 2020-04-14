@@ -27,8 +27,21 @@ gem 'simple_form'
 # devise gem for log in's
 gem 'devise'
 
+# problems with dropdown
+# not solved after adding this line
+gem 'popper'
+
+# jquery gem else sign_out does not work
+gem 'jquery-rails'
+
+# dropdown still not working after attempt 3
+gem 'jquery-turbolinks'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+
+# seeing if the dropdown now works
+gem 'bootstrap', '~> 4.4.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

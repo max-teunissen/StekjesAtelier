@@ -1,5 +1,7 @@
-application.scss
 
-@import "bootstrap/scss/bootstrap";
+@import "*";
+@import "bootstrap";
+@import "font-awesome";
+@import "~bootstrap/scss/bootstrap";
 @import "node_modules/bootstrap/scss/bootstrap";
 @import 'body/footer.scss';
