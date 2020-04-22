@@ -1,38 +1,4 @@
 <div class="container">
-  <%= form_for(@stekje) do |f| %>
-    <div class="form-group">
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control', placeholder: "Enter name" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :file %>
-      <%= f.file_field :file %>
-    </div>
-    <div class="form-group">
-      <%= f.label :category %>
-      <%= f.text_field :category, class: 'form-control', placeholder: "Enter category" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :size %>
-      <%= f.number_field :size, class: 'form-control', placeholder: "Enter size" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :description %>
-      <%= f.text_field :description, class: 'form-control', placeholder: "Enter plant description" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :price %>
-      <%= f.number_field :price, class: 'form-control', placeholder: "Enter price" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :care %>
-      <%= f.number_field :care, in: 1..5, step: 1, class: 'form-control'%>
-    </div>
-    <div class="form-group">
-      <%= f.label :instock %>
-      <%= f.check_box :instock, class: 'form-check-label', placeholder: "Enter care" %>
-    </div>
-    <%= f.submit %>
-  <% end %>
+<%= render 'form_stekje', stekjes: @stekjes %>
   <%= link_to 'Terug', home_path, class:'btn btn-warning ' %>
 </div>

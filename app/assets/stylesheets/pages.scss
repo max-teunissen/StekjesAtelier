@@ -1,3 +1,47 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// To use the fancy font on the homepage:
+html, body {
+  height: 100%;
+}
+
+.background-home {
+  display: flex;
+  height: 100%;
+}
+
+.right-div {
+  text-align: center;
+  background-image: url(background_SA_2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.two-div-home {
+  min-height: 100%;
+  width: 100%;
+}
+
+.left-div {
+  text-align: center;
+  background-color: #7FB069;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+
+.h1-home {
+  font-family: 'Marck Script', cursive;
+  font-size: 80px;
+}
+
+.h2-home {
+  font-family: 'Marck Script', cursive;
+}

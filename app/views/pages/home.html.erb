@@ -1,12 +1,13 @@
-<div class="container">
-  <div>
-    <h1>This works</h1>
+<div class="background-home">
+  <div class='left-div two-div-home'>
+    <h2 class="h2-home">Welkom bij het</h2></br>
+    <h1 class="h1-home">Stekjes Atelier</h1>
   </div>
-  <div>
-    <%= link_to 'Voeg een stekje toe', new_path, class:'btn btn-success' %>
-    <br>
-  </div>
-  <div>
-    <%= link_to 'Bezoek alle stekjes', allstekjes_path, class:'btn btn-success' %>
+  <div class="right-div two-div-home">
+    <!-- div with image to the right-->
+    <%= link_to 'Bekijk het assortiment', stekjes_path, class:'btn btn-info' %>
+      <% if current_user && current_user.admin %>
+      <%= link_to 'Voeg een stekje toe', new_path, class:'btn btn-success' %>
+      <% end %>
   </div>
 </div>

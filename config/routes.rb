@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :categories
   devise_for :admins
   devise_for :users do
     get '/users/sign_out', to: 'devise/sessions#destroy'
@@ -12,6 +13,12 @@ Rails.application.routes.draw do
   # about and info page
   get 'about', to: 'pages#about'
 
+  # hoe moet je bestellen pagina
+  get 'bestellen', to: 'pages#bestellen', as: :bestellen
+
+  # bekijk het hele assortiment
+  get 'assortiment', to: 'pages#assortiment', as: :assortiment
+
   # stekjes CRUD
   # all stekjes
   get 'stekjes', to: 'stekjes#index', as: :allstekjes
@@ -22,7 +29,7 @@ Rails.application.routes.draw do
 
   # edit an existing stekje
   # make the changes
-  get 'stekjes/:id/edit', to: 'stekjes#edit'
+  get 'stekjes/:id/edit', to: 'stekjes#edit', as: :editstekje
   # save the changes made
   patch 'stekjes/:id', to: 'stekjes#update'
 
@@ -31,4 +38,10 @@ Rails.application.routes.draw do
 
   # show one stekje
   get 'stekjes/:id', to: 'stekjes#show', as: :stekje
+
+  # show a user's profile
+  get 'private_profile', to: 'profiles#private'
+
+  # plantjes category show
+  get 'plantjes', to: 'stekjes#plantjes', as: :plantjes
 end

@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>StekjesAtelier</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Marck+Script&display=swap');
+    </style>
+    <title>Stekjes Atelier</title>
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -17,10 +20,8 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render 'shared/flashes' %>
     <%= render 'shared/navbar'%>
+    <%= render 'shared/flashes' %>
     <%= yield %>
     <%#= render 'layouts/shared/footer'%>
   </body>

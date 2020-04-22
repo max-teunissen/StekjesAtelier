@@ -1,19 +1,19 @@
 <div class="container">
   <h1 class="h1-css-index">Alle stekjes:</h1>
   <div>
-    <ul>
+    <ul class='arrange_stekjes'>
       <% @stekjes.each do |stekje| %>
         <div class="card" style="width: 18rem; margin: 20px;">
           <%= image_tag(stekje.file, class:'card-img-top card-images-index', alt:'Card image cap',
               style:'height: 288px;')%>
           <div class="card-body">
             <h5 class="card-title"><%= stekje.name %></h5>
-            <p class="card-text"><%= stekje.description %>.</p>
-            <%= link_to 'Bekijk', stekje_path(stekje.id), class:'btn btn-primary' %>
+            <p class="card-text"><%= stekje.price %> €</p>
+            <%= link_to 'Info', stekje_path(stekje.id), class:'btn btn-success' %>
           </div>
         </div>
       <% end %>
     </ul>
   </div>
-  <%= link_to 'Terug', home_path, class:'btn btn-warning ' %>
+  <%= link_to 'Terug', home_path, class:'btn btn-dark ' %>
 </div>

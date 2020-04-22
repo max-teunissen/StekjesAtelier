@@ -1,0 +1,28 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+    <p>
+    <strong>Name:</strong>
+    <%= @category.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @category.description %>
+  </p>
+  <h3> Stekjes under this category </h3>
+    <% Stekje.where(category_id: @category.id).each do |stekje| %>
+    <div class="card" style="width: 18rem; margin: 20px;">
+          <%= image_tag(stekje.file, class:'card-img-top card-images-index', alt:'Card image cap',
+              style:'height: 288px;')%>
+          <div class="card-body">
+            <h5 class="card-title"><%= stekje.name %></h5>
+            <p class="card-text"><%= stekje.price %> €</p>
+            <%= link_to 'Info', stekje_path(stekje.id), class:'btn btn-success' %>
+          </div>
+        </div>
+    <% end %>
+
+  <%= link_to 'Edit', edit_category_path(@category), class: 'btn btn-warning'%> |
+  <%= link_to 'Back', categories_path, class: 'btn btn-dark' %>
+
+</div>

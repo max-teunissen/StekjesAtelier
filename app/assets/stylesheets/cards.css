@@ -1,21 +1,4 @@
-.card-images-index {
-    width: 288px;
-    height: 288px;
-    display: inline-block;
-}
-
-.index-display {
+.arrange_stekjes {
   display: flex;
   flex-direction: row;
-}
-
-.card-height {
-  height: 442px;
-  width: 18rem;
-  border: solid;
-  border-width: 3px;
-}
-
-.extra-card-css {
-  display: flex;
 }
